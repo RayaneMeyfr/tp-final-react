@@ -29,3 +29,9 @@ Avant de lancer le projet, il faut avoir installé :
 1. **Lancer l’API avec Docker**
    ```bash
    docker run -d -p 8080:8080 christopheutp/note-backend
+
+## Interface de l'application
+
+![Description de l'image](./tp-final/screen/register.png)
+![Description de l'image](./tp-final/screen/dash.png)
+![Description de l'image](./tp-final/screen/login.png)

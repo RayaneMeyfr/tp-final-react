@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import { NavLink, useLocation, useNavigate} from "react-router-dom"
-import { loginRequest } from '../../service/api';
+import { registerRequest } from '../../service/api';
 import { setToken } from '../../service/auth';
 
-
-export default function Login() {
+export default function Register() {
     const [email,setEmail] = useState("admin");
     const [password,setPassword] = useState("password");
     const [error,setError] = useState(null);
@@ -15,7 +14,7 @@ export default function Login() {
         e.preventDefault();
         setError(null);
         try {
-            const {accessToken} = await loginRequest({email,password});
+            const {accessToken} = await registerRequest({email,password});
             setToken(accessToken);
             const redirectTo = location.state?.from?.pathname || "/";
             navigate(redirectTo,{ replace:true})
@@ -27,9 +26,10 @@ export default function Login() {
 
     return (
         <div>
-            <h1>Login</h1>
+            <h1>Register</h1>
+
             <nav>
-                <NavLink to="/register"> Register</NavLink>
+                <NavLink to="/login">Login </NavLink>
             </nav>
             <form onSubmit={onSubmit}>
                 <label>email</label>

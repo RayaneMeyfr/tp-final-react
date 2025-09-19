@@ -1,12 +1,31 @@
-# React + Vite
+## TP Final : Application de Notes Sécurisées (React + Routing + JWT)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 🎯 Objectif
+Créer une **application React multi-pages** permettant à un utilisateur authentifié via **JWT** de gérer ses notes (**CRUD**) en communiquant avec un **backend Spring Boot sécurisé**.  
+Ce projet aborde :
+- le **routing**,
+- les **routes protégées**,
+- la **gestion d’un token JWT**,
+- l’intégration d’un **backend externe**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 📋 Spécifications
+- Projet réalisé en **React**
+- Utilisation d’une **API Spring Boot** (hébergée dans un conteneur Docker) :  
+  👉 [Image Docker Hub](https://hub.docker.com/r/christopheutp/note-backend)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ⚙️ Prérequis
+Avant de lancer le projet, il faut avoir installé :
+- **Node.js** (gestionnaire de packages `npm`)
+- **Docker** (pour exécuter l’API en local)
+
+---
+
+### 🚀 Mise en place
+
+1. **Lancer l’API avec Docker**
+   ```bash
+   docker run -d -p 8080:8080 christopheutp/note-backend
